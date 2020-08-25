@@ -14,10 +14,10 @@ var livereload = require("livereload")
 var connectLivereload = require("connect-livereload")
  
 var liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, 'public'));
+liveReloadServer.watch(path.join(__dirname));
 var app = express()
  
-var publicDir = path.join(__dirname, 'public')
+var publicDir = path.join(__dirname)
  
 app.set('port', process.env.PORT || 3000)
 app.use(logger('dev'))
