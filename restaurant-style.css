@@ -1,0 +1,31 @@
+
+.site-title {
+   font-family: "Roboto", sans-serif;
+   font-style: "bold";
+}
+
+.slogan {
+   font-family: "Roboto", sans-serif;
+   font-style: "bold";
+}
+
+.main-menu {
+   font-family: "Roboto", sans-serif;
+   font-style: "medium";
+   position: relative;
+   display: inline;
+   padding: 20px;
+   background-color: #d3d3d3;
+   min-width: 100px;
+   max-width:200px;
+   dispay: block;
+   float: left;
+}
+
+nav, ul{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+
