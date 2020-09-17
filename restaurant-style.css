@@ -18,7 +18,7 @@
    background-color: #d3d3d3;
    min-width: 100px;
    max-width:200px;
-   dispay: block;
+   display: block;
    float: left;
 }
 
@@ -26,6 +26,18 @@ nav, ul{
    list-style-type: none;
    margin: 0;
    padding: 0;
+}
+
+.story{
+   position: relative;
+   
+
+}
+
+.nav-grid{
+   display: grid;
+   width: 50%;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 
