@@ -1,43 +1,71 @@
 
+body{
+   margin-left: auto;
+   margin-right: auto;
+   min-width: 400px;
+   max-width: 600px;
+}
+
 .site-title {
    font-family: "Roboto", sans-serif;
-   font-style: "bold";
+   font-weight: bold;
+   text-align: center;
 }
 
 .slogan {
    font-family: "Roboto", sans-serif;
-   font-style: "bold";
+   font-weight: medium;
+   text-align: center;
 }
 
-.main-menu {
-   font-family: "Roboto", sans-serif;
-   font-style: "medium";
+nav{
+   overflow: auto;   
    position: relative;
-   display: inline;
-   padding: 20px;
-   background-color: #d3d3d3;
-   min-width: 100px;
-   max-width:200px;
-   display: block;
-   float: left;
 }
 
-nav, ul{
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
+nav
+ul{
+   list-style-type:none;
+   margin:0;
+   padding:0;
+}
+
+nav li{
+   font-family: "Robot", sans-serif;
+   font-style: "light";
+   text-align: center;
+   font-size: 16px;   
+}
+
+nav li a{
+   position:relative;
+   float: left;
+   display: block;
+   background-color: #dddddd;
+   text-decoration: none;
+   padding: 10px 0;
+   color: black;
+   width: 25%;
+   min-width: 150px;
+}
+
+nav li a:hover {
+   background-color: black;
+   color: white;
+}
+
+nav li a.active {
+   background-color:#dddddd;
+   color: white;
 }
 
 .story{
    position: relative;
-   
+   text-align: center;
+ }
 
+ .center{
+   margin-left:auto;
+   margin-right:auto;
+   display: block;
 }
-
-.nav-grid{
-   display: grid;
-   width: 50%;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-

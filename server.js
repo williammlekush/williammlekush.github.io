@@ -26,7 +26,8 @@ app.use(bodyParser.json()) // Parses json, multi-part (file), url-encoded
 app.use(connectLivereload());
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(publicDir, 'restaurant-index.html'))
+  res.sendFile(path.join(publicDir, 'restaurant-index.html')
+  )
 })
  
 var server = http.createServer(app)
