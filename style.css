@@ -69,7 +69,7 @@ nav a,
 }
 
 
-nav a.activeLink{
+a.activeLink{
    color: #203d5b;
 
 }
@@ -127,14 +127,6 @@ nav a:hover{
 
 @media screen and (max-width: 1024px)
 {
-   .navSidebar,
-   .navTopBar #mobileNavMenu,
-   .navTopBar a.icon
-   {
-      display: none;
-   }
-
-
    .navTopBar{
       display: flex;
       flex-flow: row wrap;
@@ -149,6 +141,29 @@ nav a:hover{
       background: black;
    }
 
+   .cvNavMenu{
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      background: black;
+      position: fixed;
+      top: 82px;
+      height: 54px;
+      border-bottom: 3px solid #dcedff;
+      align-items: center;
+   }
+
+   .cvNavButton{
+      font-size: 24px;
+   }
+
+   .navSidebar,
+   .navTopBar #mobileNavMenu,
+   .navTopBar a.icon
+   {
+      display: none;
+   }
    
    .homeLink,
    .navButton{
@@ -164,6 +179,10 @@ nav a:hover{
       font-size: 24px;
    }
    
+   #CV{
+      margin-top: 138px;
+   }
+
    .content{
       margin-left: 0;
       margin-top: 82px;
@@ -200,7 +219,8 @@ nav a:hover{
       text-align:left;
    }
 
-   .navButton{
+   .navButton,
+   .cvNavMenu{
       display: none;
    }
    

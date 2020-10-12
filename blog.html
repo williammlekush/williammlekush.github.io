@@ -8,10 +8,12 @@
       <meta name="description" content="About William Mlekush">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
    </head>
    <body>
 
-      <nav>
+      <nav class="navSidebar">
          <header><a href="index.html" class="homeLink">William Mlekush</a></header>
 
          <ul class="connectMenu">
@@ -22,12 +24,54 @@
          
          <ul class="navMenu">              
              <li class="navButton"><a href="work.html">Work</a></li>
-             <li class="navButton"><a href="blog.html" class="activeLink">Blog</a></li>
+             <li class="navButton activeLink"><a href="blog.html">Blog</a></li>
              <li class="navButton"><a href="about.html">About</a></li>
              <li class="navButton"><a href="CV.html">CV</a></li>
          </ul>
      </nav>
+
+     <nav class="navTopBar">
+         <header>
+             <a href="index.html" class="homeLink">William Mlekush</a>
+             <div class="connectMenu">
+                 <a class="connectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
+                 <a class="connectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
+                 <div id="email">w.mlekush@gmail.com</div></div>
+             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars"></i>
+             </a>
+             
+         </header>
+
+             <a class="navButton" href="work.html">Work</a>
+             <a class="navButton activeLink" href="blog.html">Blog</a>
+             <a class="navButton" href="about.html">About</a>
+             <a class="navButton" href="CV.html">CV</a>   
+
+             <div id=mobileNavMenu>
+                 <div class="mobileConnectMenu">
+                     <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
+                     <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
+                     <div id="email">w.mlekush@gmail.com</div></div>    
+                 <a class="mobileButton" href="work.html">Work</a>
+                 <a class="mobileButton" href="blog.html" class="activeLink">Blog</a>
+                 <a class="mobileButton" href="about.html">About</a>
+                 <a class="mobileButton" href="CV.html">CV</a>   
+             </div>
+
+             
+     </nav>
+
       
-      <script src="" async defer></script>
+     <script>
+      function myFunction() {
+          var x = document.getElementById("mobileNavMenu");
+          if (x.style.display === "flex") {
+              x.style.display = "none";
+          } else {
+              x.style.display = "flex";
+          }
+} 
+  </script>
    </body>
 </html>
