@@ -133,7 +133,7 @@ nav a:hover{
       width: 100%;
       justify-content: space-around;
       align-items: center;
-      border-bottom: 3px solid #dcedff;
+      border-bottom: 2px solid #dcedff;
       height: 80px;
       position: fixed;
       top: 0;
@@ -150,7 +150,7 @@ nav a:hover{
       position: fixed;
       top: 82px;
       height: 54px;
-      border-bottom: 3px solid #dcedff;
+      border-bottom: 2px solid #dcedff;
       align-items: center;
    }
 
