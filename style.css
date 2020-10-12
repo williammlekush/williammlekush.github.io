@@ -80,7 +80,7 @@ nav a:hover{
 
 .homeLink {
    font-size: 32px;
-   font-style: bold;
+   font-weight: bold;
 }
 
 .grid-sizer,
@@ -92,7 +92,8 @@ nav a:hover{
    float: left;
 }
 
-.featured-image{
+.featured-image
+{
    display: block;
    max-width: 100%;
 }
@@ -114,6 +115,49 @@ nav a:hover{
 .grid-item:hover .featured-image-overlay{
    opacity:1;
 }
+
+.content--project{
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+}
+
+.project-title{
+   font-size: 48px;
+   margin-top: 2em;
+   margin-bottom: 1em;
+   text-align: center;
+}
+
+.project-title,
+.date-created{
+   font-weight: bold;   
+}
+
+.project-image{
+   max-width: 100%;
+   height:auto;
+}
+
+.project-title,
+.date-created,
+p{
+   width: 100%;
+   color: #dcedff;
+   margin: 1em 20%;
+}
+
+.date-created{
+   font-size: 18px;
+   text-transform: uppercase;
+   margin: 0.5em 20%;
+}
+
+p{
+   font-size: 24px;
+}
+
+
 
 @media screen and (max-width: 1200px){
    .grid-sizer,
