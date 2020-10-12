@@ -8,11 +8,11 @@
         <meta name="description" content="Peronsal Website">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-
-        <nav>
+         <nav class="navSidebar">
             <header><a href="index.html" class="homeLink">William Mlekush</a></header>
    
             <ul class="connectMenu">
@@ -23,32 +23,112 @@
             
             <ul class="navMenu">              
                 <li class="navButton"><a href="work.html">Work</a></li>
-                <li class="navButton"><a href="blog.html" class="activeLink">Blog</a></li>
+                <li class="navButton"><a href="blog.html">Blog</a></li>
                 <li class="navButton"><a href="about.html">About</a></li>
                 <li class="navButton"><a href="CV.html">CV</a></li>
             </ul>
         </nav>
 
-        <section class="grid allGrid">
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-        </section>
+        <nav class="navTopBar">
+            <header>
+                <a href="index.html" class="homeLink">William Mlekush</a>
+                <div class="connectMenu">
+                    <a class="connectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
+                    <a class="connectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
+                    <div id="email">w.mlekush@gmail.com</div></div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                
+            </header>
 
-        <p> Website in development.</p>
-        <p> In the meantime, check out 
-            <a href = "https://williammlekush.com/">my wp website</a>.
-        </p> 
-        </p>
-        <script src="/reload/reload.js"></script> 
+                <a class="navButton" href="work.html">Work</a>
+                <a class="navButton" href="blog.html">Blog</a>
+                <a class="navButton" href="about.html">About</a>
+                <a class="navButton" href="CV.html">CV</a>   
+
+               
+
+                <div id=mobileNavMenu>
+                    <div class="mobileConnectMenu">
+                        <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
+                        <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
+                        <div id="email">w.mlekush@gmail.com</div></div>    
+                    <a class="mobileButton" href="work.html">Work</a>
+                    <a class="mobileButton" href="blog.html">Blog</a>
+                    <a class="mobileButton" href="about.html">About</a>
+                    <a class="mobileButton" href="CV.html">CV</a>   
+                </div>
+
+                
+        </nav>
+
+
+        <section class="content">
+            <section class="masonry-grid allGrid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">virtualDissent_hyper.txt</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_virtualDissent.jpg" alt="White text on a black background introducing the virtualDissent_hyper.txt virtual exhibition."></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">Deliberate Negligence</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_DeliberateNegligence.jpg" alt="A small figure looks down into a three-story outdoor hallway."></div>
+                <div class="grid-item grid-item--small">
+                    <div class="featured-image-overlay">Fire Planet</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_FirePlanet.jpg" alt="Two floating gloves indicate a first-person POV looking at a domed city in the distance. Fires are nearby."></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">Futility</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_Futility.jpg" alt="A black cloud on a white background."></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">Surveillance Hall</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_SurveillanceHall.jpg" alt="White sprials made of small circles on a black background."></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">Woodworking</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_Woodworking.jpg" alt="A closeup of a piece of walnut."></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">The Pod</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_Pod.jpg" alt="A coffin-like box centered in the frame."></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">Fionn</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_Fionn.jpeg" alt="A hexagonal prism made of plywood."></div>
+                <div class="grid-item grid-item--small">
+                    <div class="featured-image-overlay">Suggestion Box</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_SuggestionBox.jpeg" alt="A box hanging on a wall with Suggestion Box imprinted on it."></div>
+                <div class="grid-item">
+                    <div class="featured-image-overlay">Creating Curiosity</div>
+                    <img class="featured-image" src="00_assets\00_FeaturedImages\FeaturedImage_CreatingCuriosity.jpg" alt="An eye peers out from betwen two fingers."></div>
+            </section>
+        </section>
+   
+
+        <script src="masonry.pkgd.min.js"></script>
+        <script src="imagesloaded.pkgd.js"></script>
+
+        <script>
+            var grid = document.querySelector('.masonry-grid');
+
+            var msnry = new Masonry( grid, {
+                columnWdith: '.grid-sizer',
+            itemSelector: '.grid-item',
+          
+            percentPosition: true             
+            });
+
+            imagesLoaded( grid ).on( 'progress', function() {
+            msnry.layout();
+            });
+        </script>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("mobileNavMenu");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
+} 
+        </script>
     </body>
+
 </html>

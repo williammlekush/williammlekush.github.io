@@ -1,6 +1,256 @@
-body { font-family: "Libre Franklin", sans-serif; }
 
-#logo {
-   font-size: 50px;
+html { overflow-y: scroll;}
+
+body { 
+   font-family: Helvetica, "Libre Franklin", sans-serif; 
+   margin:0;
+   background: black;
+}
+
+.navTopBar{
+   display: none;
+}
+
+.navSidebar {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 360px;
+   height: 100%;
+   border-right: 2px solid #dcedff;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: flex-start;
+   font-size: 18px;
+   text-transform: uppercase;
+   justify-content: space-around;
+}
+
+.content{
+   margin-left: 362px;
+   padding:0;
+   width: 100%-362px;
+}
+
+.masonry-grid{
+   width: 100%;
+}
+
+.masonry-grid:after{
+   content: '';
+   display: block;
+   clear: both;
+}
+
+nav ul{
+   list-style-type: none;   
+}
+
+nav a,
+#email {
+   text-decoration:none;
+   color: #dcedff;
+   text-align: center;
+}
+
+.navSidebar header{
+   align-self: center;
+}
+
+.navSidebar .connectButton,
+.navSidebar .navButton,
+.navSidebar #email{
+   margin: 4px 0;
+}
+
+.navSidebar .connectMenu{
+   order: 2;
+   text-transform: none;
+}
+
+
+nav a.activeLink{
+   color: #203d5b;
+
+}
+
+nav a:hover{
+   color: #56876d;
+}
+
+.homeLink {
+   font-size: 32px;
    font-style: bold;
+}
+
+
+.grid-sizer,
+.grid-item{
+   width : 50%;
+}
+
+.grid-item{
+   float: left;
+   background-image: url(00_assets\00_FeaturedImages\FeaturedImage_virtualDissent.jpg);
+}
+
+.featured-image{
+   display: block;
+   max-width: 100%;
+   z-index: 0;
+}
+
+.featured-image-overlay{
+   display: flex;
+   color: #dcedff;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   background: rgba(0,0,0, 0.75);
+   width: 100%;
+   height: 100%;
+   transition: .5s ease;
+   font-size: 28px;
+   opacity: 0;
+}
+
+.grid-item:hover .featured-image-overlay{
+   opacity:1;
+}
+
+@media screen and (max-width: 1200px){
+   .grid-sizer,
+   .grid-item{
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 1024px)
+{
+   .navSidebar,
+   .navTopBar #mobileNavMenu,
+   .navTopBar a.icon
+   {
+      display: none;
+   }
+
+
+   .navTopBar{
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 3px solid #dcedff;
+      height: 80px;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      background: black;
+   }
+
+   
+   .homeLink,
+   .navButton{
+      color: #dcedff;
+      text-transform: uppercase;
+      margin: 16px;
+   }
+
+   .homeLink{
+      margin-bottom: 0;
+   }
+   .navButton{
+      font-size: 24px;
+   }
+   
+   .content{
+      margin-left: 0;
+      margin-top: 82px;
+      width: 100%;
+   }
+
+   .connectMenu {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 4px;      
+   }
+
+   .navTopBar header{
+      display: flex;
+      flex-flow: column nowrap;
+   }
+
+}
+
+@media screen and (max-width: 800px){
+   .navTopBar{
+      position: relative;
+      height:auto;
+      flex-flow: column wrap;      
+      width: 100%;
+      align-items: flex-start;
+   }
+
+   .navTopBar header{
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align:left;
+   }
+
+   .navButton{
+      display: none;
+   }
+   
+   .connectMenu{
+      display: none;
+   }
+   .content{
+      margin-top: 0;
+   }
+
+   .navTopBar #mobileNavMenu{
+      display:none;
+      flex-flow: column wrap;
+      align-items: flex-start;
+   }
+
+   .mobileConnectMenu{
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      order: 1;
+   }
+
+   .navTopBar a.icon{
+      font-size: 32px;
+      display: flex;
+      margin-right: 16px;
+   }
+
+   .homeLink{
+      margin: 16px;
+   }
+
+   #mobileNavMenu .mobileButton{
+      text-transform: uppercase;
+   }
+
+   #mobileNavMenu .mobileButton,
+   #mobileNavMenu .mobileConnectButton,
+   #mobileNavMenu #email{
+      font-size: 32px;
+      margin: 4px 0;
+   }
+
+   #mobileNavMenu .mobileButton,
+   .mobileConnectMenu{
+      margin-left:16px;
+      
+      
+   }
+
+
 }
