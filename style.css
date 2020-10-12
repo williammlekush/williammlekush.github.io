@@ -1,4 +1,3 @@
-
 html { overflow-y: scroll;}
 
 body { 
@@ -51,6 +50,7 @@ nav a,
    text-decoration:none;
    color: #dcedff;
    text-align: center;
+   transition: 0.3s ease;
 }
 
 .navSidebar header{
@@ -83,7 +83,6 @@ nav a:hover{
    font-style: bold;
 }
 
-
 .grid-sizer,
 .grid-item{
    width : 50%;
@@ -91,13 +90,11 @@ nav a:hover{
 
 .grid-item{
    float: left;
-   background-image: url(00_assets\00_FeaturedImages\FeaturedImage_virtualDissent.jpg);
 }
 
 .featured-image{
    display: block;
    max-width: 100%;
-   z-index: 0;
 }
 
 .featured-image-overlay{
