@@ -22,8 +22,8 @@
             </ul>         
             
             <ul class="navMenu">              
-                <li class="navButton"><a href="../work.html">Work</a></li>
-                <li class="navButton"><a href="../blog.html">Blog</a></li>
+                <!-- <li class="navButton"><a href="../work.html">Work</a></li>
+                <li class="navButton"><a href="../blog.html">Blog</a></li> -->
                 <li class="navButton"><a href="../about.html">About</a></li>
                 <li class="navButton"><a href="../cv.html">CV</a></li>
             </ul>
@@ -42,8 +42,8 @@
                 
             </header>
 
-                <a class="navButton" href="../work.html">Work</a>
-                <a class="navButton" href="../blog.html">Blog</a>
+                <!-- <a class="navButton" href="../work.html">Work</a>
+                <a class="navButton" href="../blog.html">Blog</a> -->
                 <a class="navButton" href="../about.html">About</a>
                 <a class="navButton" href="../cv.html">CV</a>   
 
@@ -54,8 +54,8 @@
                         <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
                         <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
                         <div id="email">w.mlekush@gmail.com</div></div>    
-                    <a class="mobileButton" href="../work.html">Work</a>
-                    <a class="mobileButton" href="../blog.html">Blog</a>
+                    <!-- <a class="mobileButton" href="../work.html">Work</a>
+                    <a class="mobileButton" href="../blog.html">Blog</a> -->
                     <a class="mobileButton" href="../about.html">About</a>
                     <a class="mobileButton" href="../cv.html">cv</a>   
                 </div>
@@ -69,7 +69,7 @@
             <img class="project-image" src="../00_assets/00_FeaturedImages/FeaturedImage_BurjAlFanteer.jpg" alt="A tower rises from the horizon. Flamingos fly across the sky.">
             <div class="date-created">June 2019</div>
             
-            <p>Collaborators | Nisala Sathyajith Saheed and Adham Chakohi</p>
+            <p>Collaborators | <a href="http://sathyajith.info/" target="_blank">Nisala Sathyajith Saheed</a> and <a href="https://chakohi.com/" target="_blank">Adham Chakohi</a></p>
             
             <p>Several years ago, a water pipeline burst in the Al Wathba 
                 region of Abu Dhabi, releasing enough water for the growth 
@@ -129,11 +129,6 @@
             <img class="project-image" src="../00_assets/01_ProjectImages/04_BurjAlFanteer/proposal-04.jpg" alt="Page 4 of the architecture proposal.">
 
         </section>
-   
-
-        <script src="masonry.pkgd.min.js"></script>
-        <script src="imagesloaded.pkgd.js"></script>
-
 
         <script>
             function myFunction() {
@@ -143,7 +138,16 @@
                 } else {
                     x.style.display = "flex";
                 }
-} 
+            }
+            function closeMobileMenu(){
+                var x = document.getElementById("mobileNavMenu")
+                var w = window.innerWidth;
+                if(w > 800) {
+                    x.style.display = "none";
+                } 
+            } 
+
+            window.onresize = closeMobileMenu;
         </script>
     </body>
 

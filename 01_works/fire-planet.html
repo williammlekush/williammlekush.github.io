@@ -22,8 +22,8 @@
             </ul>         
             
             <ul class="navMenu">              
-                <li class="navButton"><a href="../work.html">Work</a></li>
-                <li class="navButton"><a href="../blog.html">Blog</a></li>
+                <!-- <li class="navButton"><a href="../work.html">Work</a></li>
+                <li class="navButton"><a href="../blog.html">Blog</a></li> -->
                 <li class="navButton"><a href="../about.html">About</a></li>
                 <li class="navButton"><a href="../cv.html">CV</a></li>
             </ul>
@@ -42,8 +42,8 @@
                 
             </header>
 
-                <a class="navButton" href="../work.html">Work</a>
-                <a class="navButton" href="../blog.html">Blog</a>
+                <!-- <a class="navButton" href="../work.html">Work</a>
+                <a class="navButton" href="../blog.html">Blog</a> -->
                 <a class="navButton" href="../about.html">About</a>
                 <a class="navButton" href="../cv.html">CV</a>   
 
@@ -54,8 +54,8 @@
                         <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
                         <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
                         <div id="email">w.mlekush@gmail.com</div></div>    
-                    <a class="mobileButton" href="../work.html">Work</a>
-                    <a class="mobileButton" href="../blog.html">Blog</a>
+                    <!-- <a class="mobileButton" href="../work.html">Work</a>
+                    <a class="mobileButton" href="../blog.html">Blog</a> -->
                     <a class="mobileButton" href="../about.html">About</a>
                     <a class="mobileButton" href="../cv.html">cv</a>   
                 </div>
@@ -69,8 +69,8 @@
                 <iframe class="embedded-video" src="https://www.youtube.com/embed/OB0TBmClkfA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
            </div>
             <div class="date-created">March 2020</div>
-            <p>Collaborators | Mari Calderón and Steven Wyks</p>
-            <p>Download & Play | Windows App</p>
+            <p>Collaborators | <a href="https://maricalderon.net/work" target="_blank">Mari Calderón</a> and <a href="http://stevenwyks.com/index.html" target="_blank">Steven Wyks</a></p>
+            <p>Download & Play | <a href="https://drive.google.com/file/d/1NANiI4neq7A3xgFKR08UbMQtGPFfI3tP/view?usp=sharing" target="_blank">Windows App</a></p>
 
             <h1>Experience</h1> 
             <p>The user stands on a barren planet, fires burning all around, 
@@ -115,11 +115,6 @@
 
         </section>
    
-
-        <script src="masonry.pkgd.min.js"></script>
-        <script src="imagesloaded.pkgd.js"></script>
-
-
         <script>
             function myFunction() {
                 var x = document.getElementById("mobileNavMenu");
@@ -128,7 +123,15 @@
                 } else {
                     x.style.display = "flex";
                 }
-} 
+            }
+            function closeMobileMenu(){
+                var x = document.getElementById("mobileNavMenu")
+                var w = window.innerWidth;
+                if(w > 800) {
+                    x.style.display = "none";
+                } 
+            } 
+            window.onresize = closeMobileMenu;
         </script>
     </body>
 

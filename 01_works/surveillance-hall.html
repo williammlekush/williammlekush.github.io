@@ -22,8 +22,8 @@
             </ul>         
             
             <ul class="navMenu">              
-                <li class="navButton"><a href="../work.html">Work</a></li>
-                <li class="navButton"><a href="../blog.html">Blog</a></li>
+                <!-- <li class="navButton"><a href="../work.html">Work</a></li>
+                <li class="navButton"><a href="../blog.html">Blog</a></li> -->
                 <li class="navButton"><a href="../about.html">About</a></li>
                 <li class="navButton"><a href="../cv.html">CV</a></li>
             </ul>
@@ -42,8 +42,8 @@
                 
             </header>
 
-                <a class="navButton" href="../work.html">Work</a>
-                <a class="navButton" href="../blog.html">Blog</a>
+                <!-- <a class="navButton" href="../work.html">Work</a>
+                <a class="navButton" href="../blog.html">Blog</a> -->
                 <a class="navButton" href="../about.html">About</a>
                 <a class="navButton" href="../cv.html">CV</a>   
 
@@ -54,8 +54,8 @@
                         <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
                         <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
                         <div id="email">w.mlekush@gmail.com</div></div>    
-                    <a class="mobileButton" href="../work.html">Work</a>
-                    <a class="mobileButton" href="../blog.html">Blog</a>
+                    <!-- <a class="mobileButton" href="../work.html">Work</a>
+                    <a class="mobileButton" href="../blog.html">Blog</a> -->
                     <a class="mobileButton" href="../about.html">About</a>
                     <a class="mobileButton" href="../cv.html">cv</a>   
                 </div>
@@ -68,7 +68,7 @@
             <div class="project-title">Surveillance Hall</div>
             <img class="project-image" src="../00_assets/00_FeaturedImages/FeaturedImage_SurveillanceHall.jpg" alt="White spirals on a black background.">
             <div class="date-created">Novemeber - December 2019</div>
-            <p>Full Documentation</p>
+            <p><a href="https://github.com/williammlekush/Intro-to-IM/blob/master/finale_surveillance/description.md" target="_blank">Full Documentation</a></p>
             <p>At the end of the fall semester in 2019, I designed and built a 
                 performative installation piece for the NYUAD Interactive 
                 Media exhibition.</p>
@@ -100,11 +100,6 @@
 
             
         </section>
-   
-
-        <script src="masonry.pkgd.min.js"></script>
-        <script src="imagesloaded.pkgd.js"></script>
-
 
         <script>
             function myFunction() {
@@ -114,7 +109,16 @@
                 } else {
                     x.style.display = "flex";
                 }
-} 
+            
+            } 
+            function closeMobileMenu(){
+                var x = document.getElementById("mobileNavMenu")
+                var w = window.innerWidth;
+                if(w > 800) {
+                    x.style.display = "none";
+                } 
+            }
+            window.onresize = closeMobileMenu;
         </script>
     </body>
 

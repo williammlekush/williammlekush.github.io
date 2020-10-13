@@ -23,8 +23,8 @@
          </ul>         
          
          <ul class="navMenu">              
-             <li class="navButton"><a href="work.html">Work</a></li>
-             <li class="navButton"><a href="blog.html">Blog</a></li>
+             <!-- <li class="navButton"><a href="work.html">Work</a></li>
+             <li class="navButton"><a href="blog.html">Blog</a></li> -->
              <li class="navButton"><a href="about.html" class="activeLink">About</a></li>
              <li class="navButton"><a href="cv.html">CV</a></li>
          </ul>
@@ -43,8 +43,8 @@
              
          </header>
 
-             <a class="navButton" href="work.html">Work</a>
-             <a class="navButton" href="blog.html">Blog</a>
+             <!-- <a class="navButton" href="work.html">Work</a>
+             <a class="navButton" href="blog.html">Blog</a> -->
              <a class="navButton activeLink" href="about.html">About</a>
              <a class="navButton" href="cv.html">CV</a>   
 
@@ -55,8 +55,8 @@
                      <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
                      <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
                      <div id="email">w.mlekush@gmail.com</div></div>    
-                 <a class="mobileButton" href="work.html">Work</a>
-                 <a class="mobileButton" href="blog.html">Blog</a>
+                 <!-- <a class="mobileButton" href="work.html">Work</a>
+                 <a class="mobileButton" href="blog.html">Blog</a> -->
                  <a class="mobileButton activeLink" href="about.html">About</a>
                  <a class="mobileButton" href="cv.html">CV</a>   
              </div>
@@ -65,8 +65,9 @@
      </nav>
 
 
-     <article class="About Me">
-        <img class="headShot"></img>
+     <section class="content content--project">
+         <div class="project-title">About</div>
+        <img class="project-image" src="00_assets/headshot.jpg" alt="Me, sitting in a chair.">
         <p>I am a cautious optimist and disciplined pragmatist focused on creating delightful, empowering experiences. 
            I believe in design thinking as a method for interrogating and expressing human values. 
            My passions lie in interaction design, XR development, and craftsmanship.</p>
@@ -80,7 +81,7 @@
          During the semester, I work as a Wood Shop assistant, improving my ability to fabricate by practicing traditional joinery and carpentry.
           When not making or thinking about making, I spend time cross-training movement disciplines
            (currently climbing, hand-balancing, floreio, and powerlifting) and backpacking wilderness areas.</p>
-      </article>
+     </section>
     
       
       <script>
@@ -91,6 +92,15 @@
              } else {
                  x.style.display = "flex";
              }
-} 
+        }
+
+        function closeMobileMenu(){
+                var x = document.getElementById("mobileNavMenu")
+                var w = window.innerWidth;
+                if(w > 800) {
+                    x.style.display = "none";
+                } 
+            } 
+            window.onresize = closeMobileMenu;
      </script>   </body>
 </html>

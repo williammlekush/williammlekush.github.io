@@ -88,7 +88,6 @@ nav a:hover{
 
 .homeLink {
    font-size: 32px;
-   font-weight: bold;
 }
 
 .grid-sizer,
@@ -148,7 +147,7 @@ justify-content: center;
 margin-bottom: 75px;
 }
 
-.project-title,
+
 .date-created{
    font-weight: bold;   
 }
@@ -206,6 +205,16 @@ margin-bottom: 75px;
    margin: .5em 0;
 }
 
+.content--project a{
+   color: #dcedff;
+   transition:.3s;
+}
+
+.content--project a:hover{
+   color: #56876d;
+   text-decoration:none;
+}
+
 .italic {
    font-style: italic;
 }
@@ -226,6 +235,13 @@ margin-bottom: 75px;
    right: 0;
    width: 100%;
    height: 100%;
+}
+
+#sketch-futility{
+   width: 100%;
+   height: 540px;
+   margin: .5em 15%;
+   border: none;
 }
 
 
@@ -253,7 +269,7 @@ margin-bottom: 75px;
       z-index: 1;
       background: black;
    }
-
+  
    .cvNavMenu{
       width: 100%;
       display: flex;
@@ -288,6 +304,7 @@ margin-bottom: 75px;
    .homeLink{
       margin-bottom: 0;
    }
+
    .navButton{
       font-size: 24px;
    }
@@ -313,6 +330,10 @@ margin-bottom: 75px;
       flex-flow: column nowrap;
    }
 
+    
+   #mobileNavMenu{
+      display:none;
+   }
 }
 
 @media screen and (max-width: 800px){
@@ -395,7 +416,8 @@ margin-bottom: 75px;
    .content--project p,
    .content--project ul,
    .masonry-grid--project,
-   .project-image{
+   .project-image,
+   #sketch-futility{
       margin: .5em 10%;
    }
 

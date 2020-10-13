@@ -22,8 +22,8 @@
             </ul>         
             
             <ul class="navMenu">              
-                <li class="navButton"><a href="../work.html">Work</a></li>
-                <li class="navButton"><a href="../blog.html">Blog</a></li>
+                <!-- <li class="navButton"><a href="../work.html">Work</a></li>
+                <li class="navButton"><a href="../blog.html">Blog</a></li> -->
                 <li class="navButton"><a href="../about.html">About</a></li>
                 <li class="navButton"><a href="../cv.html">CV</a></li>
             </ul>
@@ -42,8 +42,8 @@
                 
             </header>
 
-                <a class="navButton" href="../work.html">Work</a>
-                <a class="navButton" href="../blog.html">Blog</a>
+                <!-- <a class="navButton" href="../work.html">Work</a>
+                <a class="navButton" href="../blog.html">Blog</a> -->
                 <a class="navButton" href="../about.html">About</a>
                 <a class="navButton" href="../cv.html">CV</a>   
 
@@ -54,8 +54,8 @@
                         <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
                         <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
                         <div id="email">w.mlekush@gmail.com</div></div>    
-                    <a class="mobileButton" href="../work.html">Work</a>
-                    <a class="mobileButton" href="../blog.html">Blog</a>
+                    <!-- <a class="mobileButton" href="../work.html">Work</a>
+                    <a class="mobileButton" href="../blog.html">Blog</a> -->
                     <a class="mobileButton" href="../about.html">About</a>
                     <a class="mobileButton" href="../cv.html">cv</a>   
                 </div>               
@@ -64,8 +64,11 @@
 
         <section class="content content--project">
             <div class="project-title">Futility</div>
+
+            <iframe id="sketch-futility" src="https://editor.p5js.org/williammlekush/embed/2ojebft7q"></iframe>
+
             <div class="date-created">July 2020</div>
-            <p>View in Browser</p>
+            <p><a href="https://editor.p5js.org/williammlekush/present/2ojebft7q" target="_blank">View in Full Window</a></p>
             <p>As we trace our paths through life, we turn, fall back, and 
                 encounter the lives and legacies of others. Futile 
                 persistence creates meaning in community, legacy, and 
@@ -76,7 +79,7 @@
                 Moving backward weakens these places, and they fade. Futility 
                 continues until the user decides it should end.</p>
             <h1>Process</h1>
-            <p>Created with Processing 3.5.4 and translated into p5.js, 
+            <p>Created with <a href="https://processing.org/" target="_blank">Processing 3.5.4</a> and translated into <a href="https://p5js.org/" target="_blank">p5.js</a>, 
                 this project started as a simple algorithmic coding practice. 
                 The initial build generated lines which were not aware of 
                 whether they were moving forward or backward, but had nearly 
@@ -114,7 +117,7 @@
                 code. From there, I implemented the classes in Java with 
                 Processing IDE before translating them into JavaScript with 
                 the p5.js library. All of the versions referenced can be 
-                found at my GitHub.</p>
+                found at my <a href="https://github.com/williammlekush/conceptualPieces/tree/master/200205_futility" target="_blank">GitHub</a>.</p>
             <section class="masonry-grid--project">
                 <div class="grid-sizer--project"></div>
 
@@ -199,7 +202,15 @@
                 } else {
                     x.style.display = "flex";
                 }
-} 
+            }
+            function closeMobileMenu(){
+                var x = document.getElementById("mobileNavMenu")
+                var w = window.innerWidth;
+                if(w > 800) {
+                    x.style.display = "none";
+                } 
+            } 
+            window.onresize = closeMobileMenu;
         </script>
     </body>
 
