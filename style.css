@@ -117,7 +117,7 @@ nav a:hover{
 }
 
 .featured-image,
-.grid-item--project .project-image
+.grid-item--project .project-image--masonry
 {
    display: block;
    max-width: 100%;
