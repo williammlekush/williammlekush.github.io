@@ -305,6 +305,10 @@ margin-bottom: 75px;
    margin: 1em;
 }
 
+#headshot{
+   margin: 96px 15%;
+}
+
 @media screen and (min-width: 2500px){
    @media screen and (min-width: 2500px){
       .content--cv p,
@@ -504,7 +508,8 @@ margin-bottom: 75px;
    .content--cv ul,
    .content--cv h3,
    .content--cv h4,
-   .content--cv .ts-grid
+   .content--cv .ts-grid,
+   #headshot
    {
       margin: .5em 10%;
    }
@@ -514,5 +519,9 @@ margin-bottom: 75px;
    {
       margin-top: 2em;
    }  
+
+   #headshot{
+      margin-top: 54px;
+   }
 
 }
