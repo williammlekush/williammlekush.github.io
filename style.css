@@ -185,7 +185,6 @@ margin-bottom: 75px;
    margin-top: 1em;
    margin-bottom: 1em;
    text-align: center;
-   color: #a0ceff;
 }
 
 .content--project h1,
@@ -193,7 +192,11 @@ margin-bottom: 75px;
    font-size: 32px;
    font-weight: normal;
    margin-top: 1em;
-   color: #56876d;
+}
+
+.content--project h1
+{
+   color: #a0ceff;
 }
 
 
