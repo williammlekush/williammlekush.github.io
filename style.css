@@ -31,11 +31,19 @@ body {
    width: 100%-362px;
 }
 
-.masonry-grid{
+.masonry-grid
+{
    width: 100%;
 }
 
-.masonry-grid:after{
+.masonry-grid--project{
+   width: 100%;
+   display: block;
+   margin: 0 15%;
+}
+
+.masonry-grid:after
+{
    content: '';
    display: block;
    clear: both;
@@ -88,11 +96,28 @@ nav a:hover{
    width : 50%;
 }
 
+.grid-sizer--project{
+   width: 15%;
+}
+
+.grid-item--project{
+   float: left;
+}
+
+.grid-item--project--small{
+   width: 33.33333%;
+}
+
+.grid-item--project--large{
+   width: 50%;
+}
+
 .grid-item{
    float: left;
 }
 
-.featured-image
+.featured-image,
+.grid-item--project .project-image
 {
    display: block;
    max-width: 100%;
@@ -120,13 +145,7 @@ nav a:hover{
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
-}
-
-.project-title{
-   font-size: 48px;
-   margin-top: 2em;
-   margin-bottom: 1em;
-   text-align: center;
+margin-bottom: 75px;
 }
 
 .project-title,
@@ -141,10 +160,25 @@ justify-content: center;
 
 .project-title,
 .date-created,
-p{
+.content--project h1,
+.content--project p,
+.content--project ul{
    width: 100%;
    color: #dcedff;
-   margin: 1em 20%;
+   margin: .5em 15%;
+}
+
+.project-title{
+   font-size: 48px;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   text-align: center;
+}
+
+.content--project h1{
+   font-size: 32px;
+   font-weight: normal;
+   text-decoration: underline;
 }
 
 .date-created{
@@ -153,8 +187,19 @@ p{
    margin: 0.5em 20%;
 }
 
-p{
+.content--project p,
+.content--project ul{
    font-size: 24px;
+   line-height: 1.5;
+}
+
+.content--project ul{ 
+   list-style-type: none;
+   padding-left: 0;
+}
+
+.italic {
+   font-style: italic;
 }
 
 
@@ -313,5 +358,16 @@ p{
       
    }
 
+   .content--project .project-title{
+      font-size: 36px;
+   }
+
+   .project-title,
+   .date-created,
+   .content--project h1,
+   .content--project p,
+   .content--project ul{
+      margin: .5em 10%;
+   }
 
 }
