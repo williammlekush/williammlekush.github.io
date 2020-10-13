@@ -99,14 +99,47 @@
                elevator mechanism releases quickly, causing the climber to 
                fall to the bottom.
             </p>
-            <h1>Process</h1>           
+            <h1>Process</h1>      
+            <section class="masonry-grid--project">
+               <div class="grid-sizer--project"></div>
+               <div class="grid-item--project grid-item--project--large">
+                  <img class="project-image--masonry" src="../00_assets/01_ProjectImages/03_ClimbOnTime/mechanism-sketch-early-side.jpg" alt="A pen sketch of the movement mechnaism depicted from the side.">
+               </div>
+               <div class="grid-item--project grid-item--project--large">
+                  <img class="project-image--masonry" src="../00_assets/01_ProjectImages/03_ClimbOnTime/mechanism-sketch-side.jpg" alt="A pen sketch of the lift mechanism depicted from the side.">
+               </div>
+               <div class="grid-item--project">
+                  <img class="project-image--masonry" src="../00_assets/01_ProjectImages/03_ClimbOnTime/climber-model.jpg" alt="A Fusion360 window with the climber figure model centered in frame.">
+               </div>
+               <div class="grid-item--project">
+                  <img class="project-image--masonry" src="../00_assets/01_ProjectImages/03_ClimbOnTime/frame-model-front.jpg" alt="Fusion360 window with a 3D model of the aluminum t-frame used to support the mechanism.">
+               </div>
+               <div class="grid-item--project">
+                  <img class="project-image--masonry" src="../00_assets/01_ProjectImages/03_ClimbOnTime/movementPreview.jpg" alt="A 3D model frame-by-frame demo of the figure moving according to the movement of the cams.">
+               </div>
+            
+            </section>     
             
         </section>
    
 
         <script src="masonry.pkgd.min.js"></script>
         <script src="imagesloaded.pkgd.js"></script>
+        
+        <script>
+         var grid = document.querySelector('.masonry-grid--project');
 
+         var msnry = new Masonry( grid, {
+         columnWidth: '.grid-sizer--project',
+         itemSelector: '.grid-item--project',
+       
+         percentPosition: true             
+         });
+
+         imagesLoaded( grid ).on( 'progress', function() {
+         msnry.layout();
+         });
+     </script>
 
         <script>
             function myFunction() {

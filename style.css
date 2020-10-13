@@ -97,12 +97,9 @@ nav a:hover{
 }
 
 .grid-sizer--project{
-   width: 15%;
+   width: 1%;
 }
 
-.grid-item--project{
-   float: left;
-}
 
 .grid-item--project--small{
    width: 33.33333%;
@@ -112,8 +109,9 @@ nav a:hover{
    width: 50%;
 }
 
-.grid-item{
-   float: left;
+.grid-item,
+.grid-item--project
+{   float: left;
 }
 
 .featured-image,
@@ -182,7 +180,7 @@ margin-bottom: 75px;
 
 .content--project h1{
    font-size: 32px;
-   font-weight: bold;
+   font-weight: normal;
 }
 
 .date-created{

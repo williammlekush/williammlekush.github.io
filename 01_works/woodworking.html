@@ -63,14 +63,62 @@
                 
         </nav>
 
-        <section class="content">
+        <section class="content content--project">
+            <div class="project-title">Woodworking</div>
+                    
+            <img class="project-image" src="../00_assets/01_ProjectImages/06_woodworking/walnut-bowl.jpg" alt="A bowl turned out of walnut.">
+        
+            <p>As an assistant in the NYUAD Wood Shop, much of my time 
+                is spent supporting the wood shop instructor with student, 
+                faculty, and institutional projects. After hours, I often stay or 
+                return to the shop to work on my own independent pieces 
+                under the supervision of the instructor. The pieces shown 
+                here end up as gifts to friends and family. Needless to say, 
+                both the informal and formal aspects of the job have been 
+                invaluable to my development as a designer. Grappling with 
+                the physical world and making myself useful to a craftsman 
+                has taught me to:</p>
+            <uL>
+                <li>anticipate and satisfy the wants and needs of others
+                     by extrapolating from observed behavior and processes.</li>
+                <li>stay present, mindful, and intentional when working 
+                    on challenging projects and in potentially high risk environments.</li>
+                <li>anticipate fabrication problems and appropriately estimate 
+                    the time cost of a project.</li>
+                <li>ask better questions and seek to understand before seeking to explain.</li>
+            </ul>
+            
+            <img class="project-image" src="../00_assets/01_ProjectImages/06_woodworking/red-oak-beech-mallet.jpg" alt="A wood mallete made out of red oak and beech.">
+        
+            <img class="project-image" src="../00_assets/01_ProjectImages/06_woodworking/gift-mallets.jpg" alt="Two personalized mallets made out of white oak and wenge.">
+    
+            <img class="project-image" src="../00_assets/01_ProjectImages/06_woodworking/white-oak-bowl.jpg" alt="A bowl turned out of white oak.">
+        
+            <img class="project-image" src="../00_assets/01_ProjectImages/06_woodworking/jewelry-box.jpg" alt="A jewelry box made out of cherry, walnut, and brass.">
+            
+
+            
             
         </section>
    
 
         <script src="masonry.pkgd.min.js"></script>
         <script src="imagesloaded.pkgd.js"></script>
+        
+        <script>
+            var grid = document.querySelector('.masonry-grid--project');
 
+            var msnry = new Masonry( grid, {
+            columnWidth: '.grid-sizer--project',
+            itemSelector: '.grid-item--project',
+          
+            percentPosition: true             
+            });
+
+            imagesLoaded( grid ).on( 'progress', function() {
+            msnry.layout();
+            });
+        </script>
 
         <script>
             function myFunction() {
