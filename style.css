@@ -306,7 +306,8 @@ margin-bottom: 75px;
 }
 
 #headshot{
-   margin: 96px 15%;
+   margin: 96px 20%;
+   border-radius: 50%;
 }
 
 @media screen and (min-width: 2500px){
