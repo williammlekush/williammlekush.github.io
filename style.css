@@ -100,7 +100,9 @@ nav a:hover{
    width: 1%;
 }
 
-
+.grid-item--project--tiny{
+   width: 25%;
+}
 .grid-item--project--small{
    width: 33.33333%;
 }
@@ -200,6 +202,10 @@ margin-bottom: 75px;
    padding-left: 0;
 }
 
+.content--project li{
+   margin: .5em 0;
+}
+
 .italic {
    font-style: italic;
 }
@@ -229,7 +235,8 @@ margin-bottom: 75px;
    .grid-item--project{
       width: 100%;
    }
-}
+
+   
 
 @media screen and (max-width: 1024px)
 {

@@ -66,8 +66,10 @@
 
         <section class="content content--project">
            <div class="project-title">Climb On Time</div>
+           <img class="project-image" src="../00_assets/00_FeaturedImages/FeaturedImage_ClimbOnTime.jpg" alt="A 3D rendering of the climbing mechanism.">
            <div class="date-created">March - May 2020</div>
            <p>Full Documentation</p>
+           
            <h1>Concept</h1>
            <p>For centuries, clocks have kept the rhythm of human activity. 
               In the current moment, clocks dominates our lives, telling us 
@@ -87,6 +89,7 @@
                fabricated when the fabrication shops open and the artists 
                return.
             </p>
+            
             <h1>Contribution</h1>
             <p>
                In contribution to this project, I designed a mechanism to 
@@ -99,6 +102,7 @@
                elevator mechanism releases quickly, causing the climber to 
                fall to the bottom.
             </p>
+            
             <h1>Process</h1>      
             <section class="masonry-grid--project">
                <div class="grid-sizer--project"></div>
@@ -127,19 +131,19 @@
         <script src="imagesloaded.pkgd.js"></script>
         
         <script>
-         var grid = document.querySelector('.masonry-grid--project');
+            var grid = document.querySelector('.masonry-grid--project');
 
-         var msnry = new Masonry( grid, {
-         columnWidth: '.grid-sizer--project',
-         itemSelector: '.grid-item--project',
-       
-         percentPosition: true             
-         });
+            var msnry = new Masonry( grid, {
+            columnWidth: '.grid-sizer--project',
+            itemSelector: '.grid-item--project',
+        
+            percentPosition: true             
+            });
 
-         imagesLoaded( grid ).on( 'progress', function() {
-         msnry.layout();
-         });
-     </script>
+            imagesLoaded( grid ).on( 'progress', function() {
+            msnry.layout();
+            });
+        </script>
 
         <script>
             function myFunction() {
