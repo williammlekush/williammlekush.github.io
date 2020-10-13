@@ -39,7 +39,7 @@ body {
 .masonry-grid--project{
    width: 100%;
    display: block;
-   margin: 0 15%;
+   margin: .5em 15%;
 }
 
 .masonry-grid:after
@@ -153,9 +153,14 @@ margin-bottom: 75px;
    font-weight: bold;   
 }
 
-.project-image{
-   max-width: 100%;
+.project-image,
+.project-image--masonry{
+   width: 100%;
    height:auto;
+}
+
+.project-image{
+   margin: 0.5em 15%;
 }
 
 .project-title,
@@ -177,8 +182,7 @@ margin-bottom: 75px;
 
 .content--project h1{
    font-size: 32px;
-   font-weight: normal;
-   text-decoration: underline;
+   font-weight: bold;
 }
 
 .date-created{
@@ -202,11 +206,29 @@ margin-bottom: 75px;
    font-style: italic;
 }
 
+.vid-container{
+   position: relative;
+   overflow:hidden;
+   width: 100%;
+   padding-top: 56.25%;
+   margin: .5em 15%;
+}
+
+.embedded-video{
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+}
 
 
 @media screen and (max-width: 1200px){
    .grid-sizer,
-   .grid-item{
+   .grid-item,
+   .grid-item--project{
       width: 100%;
    }
 }
@@ -366,8 +388,11 @@ margin-bottom: 75px;
    .date-created,
    .content--project h1,
    .content--project p,
-   .content--project ul{
+   .content--project ul,
+   .masonry-grid--project,
+   .project-image{
       margin: .5em 10%;
    }
+
 
 }
