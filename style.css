@@ -20,7 +20,7 @@ body {
    display: flex;
    flex-flow: column nowrap;
    align-items: flex-start;
-   font-size: 18px;
+   font-size: 20px;
    text-transform: uppercase;
    justify-content: space-around;
 }
@@ -58,6 +58,7 @@ nav a,
    text-decoration:none;
    color: #dcedff;
    text-align: center;
+   line-height: 1.15;
    transition: 0.3s ease;
 }
 
@@ -140,13 +141,17 @@ nav a:hover{
    opacity:1;
 }
 
-.content--project{
+.content--project,
+.content--cv{
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
 margin-bottom: 75px;
 }
 
+.content--cv{
+   justify-content: flex-start;
+}
 
 .date-created{
    font-weight: bold;   
@@ -166,7 +171,14 @@ margin-bottom: 75px;
 .date-created,
 .content--project h1,
 .content--project p,
-.content--project ul{
+.content--project ul,
+.content--cv p,
+.content--cv h1,
+.content--cv h2,
+.content--cv ul,
+.content--cv h3,
+.content--cv h4
+{
    width: 100%;
    color: #dcedff;
    margin: .5em 15%;
@@ -179,7 +191,8 @@ margin-bottom: 75px;
    text-align: center;
 }
 
-.content--project h1{
+.content--project h1,
+.content--cv h1{
    font-size: 32px;
    font-weight: normal;
 }
@@ -191,12 +204,16 @@ margin-bottom: 75px;
 }
 
 .content--project p,
-.content--project ul{
+.content--cv p,
+.content--project ul,
+.content--cv ul,
+.content--cv h4{
    font-size: 24px;
    line-height: 1.5;
 }
 
-.content--project ul{ 
+.content--project ul,
+.content--cv ul{ 
    list-style-type: none;
    padding-left: 0;
 }
@@ -244,6 +261,64 @@ margin-bottom: 75px;
    border: none;
 }
 
+.content--cv h1{
+   text-transform: uppercase;
+   margin-top: 2em;
+}
+
+.content--cv h2{
+   font-size: 28px;
+   font-weight: normal;
+   margin-top: 2em;
+   width: 100%;
+}
+
+.content--cv h3{
+   text-transform: uppercase;
+   font-size: 18px;
+}
+
+.content--cv .relevant-courses{
+   display:flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   width: 100%;
+   margin-top: 0;
+}
+
+.content--cv .relevant-courses li{
+   margin-bottom: 1em;
+   margin-right: 1em;
+   margin-left: 1em;
+}
+
+
+.ts-grid{
+   display: flex;
+   flex-flow: row wrap;
+   width: 100%;
+   justify-content: space-around;
+   margin: 0 15%;
+}
+
+.ts-column{
+   margin: 1em;
+}
+
+@media screen and (min-width: 2500px){
+   @media screen and (min-width: 2500px){
+      .content--cv p,
+      .content--cv h1,
+      .content--cv h2,
+      .content--cv ul,
+      .content--cv h3,
+      .content--cv h4,
+      .ts-grid 
+      {
+         margin-right: 30%;
+      }
+   }
+}
 
 @media screen and (max-width: 1200px){
    .grid-sizer,
@@ -252,7 +327,12 @@ margin-bottom: 75px;
       width: 100%;
    }
 
-   
+   .ts-column,
+   .relevant-courses li{
+      width: 100%;
+   }
+
+}
 
 @media screen and (max-width: 1024px)
 {
@@ -308,15 +388,16 @@ margin-bottom: 75px;
    .navButton{
       font-size: 24px;
    }
-   
-   #CV{
-      margin-top: 138px;
-   }
+ 
 
    .content{
       margin-left: 0;
       margin-top: 82px;
       width: 100%;
+   }
+     
+   .content--cv{
+      margin-top: 138px;
    }
 
    .connectMenu {
@@ -336,7 +417,7 @@ margin-bottom: 75px;
    }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
    .navTopBar{
       position: relative;
       height:auto;
@@ -394,15 +475,14 @@ margin-bottom: 75px;
 
    #mobileNavMenu .mobileButton,
    #mobileNavMenu .mobileConnectButton,
-   #mobileNavMenu #email{
+   #mobileNavMenu #email {
       font-size: 32px;
       margin: 4px 0;
    }
 
    #mobileNavMenu .mobileButton,
-   .mobileConnectMenu{
+   .mobileConnectMenu {
       margin-left:16px;
-      
       
    }
 
@@ -417,9 +497,22 @@ margin-bottom: 75px;
    .content--project ul,
    .masonry-grid--project,
    .project-image,
-   #sketch-futility{
+   #sketch-futility,
+   .content--cv p,
+   .content--cv h1,
+   .content--cv h2,
+   .content--cv ul,
+   .content--cv h3,
+   .content--cv h4,
+   .content--cv .ts-grid
+   {
       margin: .5em 10%;
    }
 
+   .content--cv h1,
+   .content--cv h2
+   {
+      margin-top: 2em;
+   }  
 
 }
