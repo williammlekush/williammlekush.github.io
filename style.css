@@ -3,7 +3,7 @@ html { overflow-y: scroll;}
 body { 
    font-family: Helvetica, "Libre Franklin", sans-serif; 
    margin:0;
-   background: black;
+   background: #292929;;
 }
 
 .navTopBar{
@@ -16,24 +16,21 @@ body {
    top: 0;
    width: 360px;
    height: 100%;
-   border-right: 2px solid #dcedff;
    display: flex;
    flex-flow: column nowrap;
    align-items: flex-start;
-   font-size: 20px;
-   text-transform: uppercase;
+   font-size: 28px;
    justify-content: space-around;
+   box-shadow: 9.91px 9.91px 15px #222222, -9.91px -9.91px 15px #303030;
+   background: linear-gradient(125deg, #2E2E2E, #242424);
+   border-top-right-radius: 16px;
+   border-bottom-right-radius: 16px;
 }
 
 .content{
-   margin-left: 362px;
+   margin-left: 370px;
    padding:0;
-   width: 100%-362px;
-}
-
-.masonry-grid
-{
-   width: 100%;
+   width: 100%-370px;
 }
 
 .masonry-grid--project{
@@ -49,34 +46,31 @@ body {
    clear: both;
 }
 
-nav ul{
-   list-style-type: none;   
+.navSidebar .connectMenu,
+.navSidebar .navMenu,
+.navSidebar .homeLink {
+   margin: 1em;
+}
+
+.navSidebar .connectMenu,
+.navSidebar .navMenu {
+   display: flex;
+   flex-flow: row wrap;
 }
 
 nav a,
 #email {
-   text-decoration:none;
+   text-decoration: none;
    color: #dcedff;
-   text-align: center;
-   line-height: 1.15;
    transition: 0.3s ease;
-}
-
-.navSidebar header{
-   align-self: center;
-}
-
-.navSidebar .connectButton,
-.navSidebar .navButton,
-.navSidebar #email{
-   margin: 4px 0;
+   width: 100%;
+   margin: 0.5em 0;
 }
 
 .navSidebar .connectMenu{
    order: 2;
    text-transform: none;
 }
-
 
 a.activeLink{
    color: #203d5b;
@@ -89,11 +83,6 @@ nav a:hover{
 
 .homeLink {
    font-size: 32px;
-}
-
-.grid-sizer,
-.grid-item{
-   width : 50%;
 }
 
 .grid-sizer--project{
@@ -111,35 +100,55 @@ nav a:hover{
    width: 50%;
 }
 
-.grid-item,
 .grid-item--project
 {   float: left;
 }
 
-.featured-image,
 .grid-item--project .project-image--masonry
 {
    display: block;
    width: 100%;
 }
 
-.featured-image-overlay{
-   display: flex;
-   color: #dcedff;
-   position: absolute;
-   justify-content: center;
-   align-items: center;
-   background: rgba(0,0,0, 0.75);
+.project-gallery{
+   display:flex;
+   flex-flow: row wrap;
+   width: 100%;
+}
+
+.featured-image {
    width: 100%;
    height: 100%;
-   transition: .5s ease;
+   background-repeat: no-repeat;
+   object-fit: cover;
+   border-radius: 16px;
+}
+.grid-item{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   margin: 8px;
+   width: 48%;
+   border-radius: 16px;
+}
+.grid-item a{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   color: #dcedff;
+   text-decoration: none;
    font-size: 28px;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.5);
+   border-radius: 16px;
+   transition: .5s ease;
    opacity: 0;
 }
 
-.grid-item:hover .featured-image-overlay{
-   opacity:1;
-}
+.grid-item:hover a { opacity:1; }
 
 .content--project,
 .content--cv{
@@ -328,7 +337,7 @@ margin-bottom: 75px;
    border-radius: 50%;
 }
 
-@media screen and (min-width: 2500px){
+@media screen and (min-width: 2500px) {
    .content--cv p,
    .content--cv h1,
    .content--cv h2,
@@ -343,7 +352,7 @@ margin-bottom: 75px;
 }
 
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
    .grid-sizer,
    .grid-item,
    .grid-item--project{
@@ -358,20 +367,24 @@ margin-bottom: 75px;
 
 }
 
-@media screen and (max-width: 1024px)
-{
+@media screen and (max-width: 1024px) {
+   .navSidebar{
+      display: none;
+   }
+
    .navTopBar{
       display: flex;
       flex-flow: row wrap;
       width: 100%;
-      justify-content: space-around;
-      align-items: center;
-      border-bottom: 2px solid #dcedff;
-      height: 80px;
+      justify-content: space-between;
+      align-items: flex-start;
       position: fixed;
       top: 0;
       z-index: 1;
-      background: black;
+      box-shadow: 9.91px 9.91px 15px #222222, -9.91px -9.91px 15px #303030;
+      background: linear-gradient(125deg, #2E2E2E, #242424);
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
    }
   
    .cvNavMenu{
@@ -390,72 +403,26 @@ margin-bottom: 75px;
    .cvNavButton{
       font-size: 24px;
    }
-
-   .navSidebar,
-   .navTopBar #mobileNavMenu,
-   .navTopBar a.icon
-   {
-      display: none;
-   }
    
    .homeLink,
    .navButton{
       color: #dcedff;
-      text-transform: uppercase;
-      margin: 16px;
    }
 
-   .homeLink{
-      margin-bottom: 0;
-   }
-
-   .navButton{
-      font-size: 24px;
+   .homeLink, a.icon{
+      width: auto;
+      padding: 0.5em 1em;
+      font-size: 32px;
    }
  
-
    .content{
       margin-left: 0;
-      margin-top: 82px;
+      padding-top: 110px;
       width: 100%;
    }
      
    .content--cv{
       margin-top: 138px;
-   }
-
-   .connectMenu {
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 4px;      
-   }
-
-   .navTopBar header{
-      display: flex;
-      flex-flow: column nowrap;
-   }
-
-    
-   #mobileNavMenu{
-      display:none;
-   }
-}
-
-@media screen and (max-width: 800px) {
-   .navTopBar{
-      position: relative;
-      height:auto;
-      flex-flow: column wrap;      
-      width: 100%;
-      align-items: flex-start;
-   }
-
-   .navTopBar header{
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      text-align:left;
    }
 
    .navButton,
@@ -474,40 +441,20 @@ margin-bottom: 75px;
       display:none;
       flex-flow: column wrap;
       align-items: flex-start;
+      width: 100%;
    }
 
    .mobileConnectMenu{
       display: flex;
       flex-flow: column wrap;
       align-items: flex-start;
-      order: 1;
-   }
-
-   .navTopBar a.icon{
-      font-size: 32px;
-      display: flex;
-      margin-right: 16px;
-   }
-
-   .homeLink{
-      margin: 16px;
-   }
-
-   #mobileNavMenu .mobileButton{
-      text-transform: uppercase;
    }
 
    #mobileNavMenu .mobileButton,
    #mobileNavMenu .mobileConnectButton,
    #mobileNavMenu #email {
       font-size: 32px;
-      margin: 4px 0;
-   }
-
-   #mobileNavMenu .mobileButton,
-   .mobileConnectMenu {
-      margin-left:16px;
-      
+      margin: 0.5em 1em;
    }
 
    .content--project .project-title{
@@ -545,4 +492,20 @@ margin-bottom: 75px;
       margin-top: 54px;
    }
 
+}
+
+@media screen and (max-width: 800px){
+   .navTopBar {
+      position: relative;
+   }
+
+   .content {
+      padding-top: 8px;
+   }
+
+   .grid-item {
+      margin: 8px 16px;
+   }
+
+   
 }
