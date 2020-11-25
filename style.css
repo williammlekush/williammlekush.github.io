@@ -367,7 +367,7 @@ margin-bottom: 75px;
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
    .navSidebar{
       display: none;
    }
@@ -404,15 +404,31 @@ margin-bottom: 75px;
       font-size: 24px;
    }
    
+   #hamLabel,
    .homeLink,
    .navButton{
       color: #dcedff;
    }
 
-   .homeLink, a.icon{
+   .homeLink, #hamLabel{
       width: auto;
       padding: 0.5em 1em;
       font-size: 32px;
+   }
+
+   #hamburger{
+      display: none;
+   }
+
+   #hamLabel{
+      margin: 0.5em;
+   }
+
+   #hamburger:checked ~ #mobileNavMenu { display: flex; }
+
+   #hamLabel:hover{
+      color: #56876d;
+      cursor: pointer;
    }
  
    .content{
@@ -437,7 +453,7 @@ margin-bottom: 75px;
       margin-top: 0;
    }
 
-   .navTopBar #mobileNavMenu{
+   #mobileNavMenu{
       display:none;
       flex-flow: column wrap;
       align-items: flex-start;

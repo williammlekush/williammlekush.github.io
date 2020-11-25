@@ -12,51 +12,11 @@
     </head>
 
     <body>
-         <nav class="navSidebar">
-            <a href="index.html" class="homeLink">William Mlekush</a>
-   
-            <div class="connectMenu">
-                <a class='connectButton' id ='linkedIn' href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a></li>
-                <a class="connectButton" id="gitHub" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
-                <div class="connectButton" id="email">w.mlekush@gmail.com</div>
-            </div>         
-            
-            <div class="navMenu">              
-                <a class="navButton" a href="about.html">About</a></li>
-                <a class="navButton" a href="cv.html">CV</a></li>
-            </div>
-        </nav>
 
-        <nav class="navTopBar">
-            <a href="index.html" class="homeLink">William Mlekush</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-    
-            <div id=mobileNavMenu>
-                 
-                <a class="mobileButton" href="about.html">About</a>
-                <a class="mobileButton" href="cv.html">CV</a>   
-
-                <div class="mobileConnectMenu">
-                    <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
-                    <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
-                    <div id="email">w.mlekush@gmail.com</div>
-                </div> 
-
-            </div>    
-        </nav>
-
-
-        <section class="content">
+        <section class='content'>
             <section class='project-gallery'>
-
             </section>
         </section>
-   
-
-        <script src="masonry.pkgd.min.js"></script>
-        <script src="imagesloaded.pkgd.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
@@ -74,28 +34,6 @@
                 app.initialize();
                 app.getAllEntries();
             })();
-        </script>
-
-        <script>
-            function myFunction() {
-                var x = document.getElementById("mobileNavMenu");
-                
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-            }    
-
-            function closeMobileMenu(){
-                var x = document.getElementById("mobileNavMenu")
-                var w = window.innerWidth;
-                if(w > 1024) {
-                    x.style.display = "none";
-                } 
-            }
-                        
-            window.onresize = closeMobileMenu;
         </script>
     </body>
 

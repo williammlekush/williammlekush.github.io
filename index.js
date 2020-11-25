@@ -1,13 +1,25 @@
 const app = {
 
-
    initialize: function () {
-      
+      app.setNav();
+
       app.client = contentful.createClient({
          space:'s0xe8q8ao1vz',
          accessToken:'LhgIVHvxMQFIv5pudAPQsHw2BrhpeKLGTM-rDlh663Y',
-      })
+      });            
+      
+      window.onresize = app.closeMobileMenu;
+   },
 
+   setNav: function () {
+      // load main nav bars
+      fetch('navMain.mustache')
+      .then(response => response.text())
+      .then(template => {
+         const rendered = Mustache.render(template);
+
+         $('body').prepend(rendered);
+      });
    },
 
    getEntry: function(entry) {
@@ -78,6 +90,14 @@ const app = {
       imagesLoaded( grid ).on( 'progress', function() {
       msnry.layout();
       });
-   }
+   },
+
+   closeMobileMenu: function() {
+      let navMenu = $('mobileNavMenu');
+      let w = window.innerWidth;
+      if(w > 1000) navMenu.style.display = "none";
+      
+  }
+
 }
 
