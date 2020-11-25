@@ -123,6 +123,7 @@ nav a:hover{
    object-fit: cover;
    border-radius: 16px;
 }
+
 .grid-item{
    display: flex;
    align-items: center;
@@ -280,9 +281,6 @@ margin-bottom: 75px;
    color: #a0ceff;
 }
 
-.content--cv #education-header{
-}
-
 .content--cv h2{
    font-size: 28px;
    font-weight: normal;
@@ -313,6 +311,13 @@ margin-bottom: 75px;
    margin-left: 1em;
 }
 
+#cvNav{
+      margin: 0 0.5em;
+}
+
+#cvNav .cvNavButton {
+   margin: 0.25em 0;
+}
 
 .ts-grid,
 .rc-grid{
@@ -333,8 +338,9 @@ margin-bottom: 75px;
 
 
 #headshot{
-   margin: 96px 20%;
+   margin: 2em 0;
    border-radius: 50%;
+   width: 50%;
 }
 
 @media screen and (min-width: 2500px) {
@@ -392,16 +398,16 @@ margin-bottom: 75px;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
-      background: black;
-      position: fixed;
-      top: 82px;
-      height: 54px;
-      border-bottom: 2px solid #dcedff;
       align-items: center;
+      padding: 0;
+      margin: 0;
    }
 
    .cvNavButton{
+      width: auto;
+      text-align: center;
       font-size: 24px;
+      padding: 0;
    }
    
    #hamLabel,
@@ -409,8 +415,9 @@ margin-bottom: 75px;
    .navButton{
       color: #dcedff;
    }
-
-   .homeLink, #hamLabel{
+   
+   .homeLink, 
+   #hamLabel{
       width: auto;
       padding: 0.5em 1em;
       font-size: 32px;
@@ -439,11 +446,6 @@ margin-bottom: 75px;
      
    .content--cv{
       margin-top: 138px;
-   }
-
-   .navButton,
-   .cvNavMenu{
-      display: none;
    }
    
    .connectMenu{
@@ -492,8 +494,7 @@ margin-bottom: 75px;
    .content--cv h3,
    .content--cv h4,
    .content--cv .ts-grid,
-   .content--cv .rc-grid,
-   #headshot
+   .content--cv .rc-grid
    {
       margin: .5em 10%;
    }
@@ -504,9 +505,6 @@ margin-bottom: 75px;
       margin-top: 2em;
    }  
 
-   #headshot{
-      margin-top: 54px;
-   }
 
 }
 
@@ -521,6 +519,10 @@ margin-bottom: 75px;
 
    .grid-item {
       margin: 8px 16px;
+   }
+
+   .cvNavMenu {
+      display: none;
    }
 
    
