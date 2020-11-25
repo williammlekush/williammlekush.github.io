@@ -12,27 +12,21 @@
     </head>
 
     <body>
-
-        <section class='content'>
-            <section class='project-gallery'>
-            </section>
-        </section>
-
+        <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+        <!-- Contentful -->
         <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
         <script>
             var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below
         </script>
         <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js"></script>
-
+        <!-- Mustache -->
         <script src="https://unpkg.com/mustache@latest"></script>
-
+        <!-- JS -->
         <script src="index.js"></script>
         <script>
             (function() {
                 app.initialize();
-                app.getAllEntries();
             })();
         </script>
     </body>
