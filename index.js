@@ -18,6 +18,21 @@ const app = {
       aboutToBody: {
          'mustache': 'about.mustache',
          'targetElement': 'body',
+      },
+      cvToBody: {
+         'mustache': 'cv.mustache',
+         'targetElement': 'body'
+      },
+      cvSectionToCard: {
+         'mustache': 'cvSection.mustache',
+      },
+      cvEducationSectionToCard: {
+         'mustache': 'cvEducationSection.mustache',
+         'targetElement': '.card--education'
+      },
+      cvExperienceSectionToCard: {
+         'mustache': 'cvExperienceSection.mustache',
+         'targetElement': '.card--experience'
       }
    },
 
@@ -32,6 +47,8 @@ const app = {
       switch (document.title) {
          case app.pageTitles.cv: 
             app.getNav('navCV.mustache');
+            app.getMustache(app.mustacheSettings.cvToBody);
+            app.getCVSections();
             break;
          default: app.getNav('navMain.mustache');
             break;
@@ -135,6 +152,34 @@ const app = {
          
          });
       });
+   },
+
+   getCVSections: function() {
+      app.client.getEntries({
+         'content_type': 'cvSection'
+      }).then(response => {
+         console.log(response);
+         response.items.sort((a,b) => (a.fields.displayOrder > b.fields.displayOrder) ? 1 : -1);
+         response.items.forEach(section => {
+            const sectionData = {
+               content: section.fields.sectionContent,
+            };
+
+            switch (section.fields.type){
+               case 'education':
+                  app.mustacheSettings.cvSectionToCard.targetElement='.card--education';                
+                  break;
+               case 'experience':
+                  app.mustacheSettings.cvSectionToCard.targetElement='.card--experience';
+                  break;
+               case 'technicalSkills':
+                  app.mustacheSettings.cvSectionToCard.targetElement='.card--technical-skills';                
+            };
+
+            app.mustacheSettings.cvSectionToCard.templateData = sectionData;
+            app.getMustache(app.mustacheSettings.cvSectionToCard);
+         })
+      })
    },
 
    setMasonryGrid: function({gridContainer = '.masonry-grid', gridSizer = '.grid-sizer', gridItem = '.grid-item'}) {
