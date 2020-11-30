@@ -8,31 +8,30 @@ const app = {
 
    mustacheSettings: {
       galleryToBody: {
-         'mustache': 'gallery.mustache',
+         'mustache': 'gallery',
          'targetElement': 'body'
       },
       galleryBlockToGallery: {
-         'mustache': 'galleryBlock.mustache',
+         'mustache': 'galleryBlock',
          'targetElement': '.gallery',
       },
       aboutToBody: {
-         'mustache': 'about.mustache',
+         'mustache': 'about',
          'targetElement': 'body',
       },
       cvToBody: {
-         'mustache': 'cv.mustache',
+         'mustache': 'cv',
          'targetElement': 'body'
       },
       cvSectionToCard: {
-         'mustache': 'cvSection.mustache',
+         'mustache': 'cvSection',
       },
-      cvEducationSectionToCard: {
-         'mustache': 'cvEducationSection.mustache',
-         'targetElement': '.card--education'
+      projectToBody: {
+         'mustache': 'project',
+         'targetElement': 'body'
       },
-      cvExperienceSectionToCard: {
-         'mustache': 'cvExperienceSection.mustache',
-         'targetElement': '.card--experience'
+      projectImgToContainer: {
+         'mustache': 'projectImage'
       }
    },
 
@@ -43,17 +42,23 @@ const app = {
          space:'s0xe8q8ao1vz',
          accessToken:'LhgIVHvxMQFIv5pudAPQsHw2BrhpeKLGTM-rDlh663Y',
       });   
+   },
 
+   setNav: function() {
       switch (document.title) {
          case app.pageTitles.cv: 
-            app.getNav('navCV.mustache');
+            app.getNav('/mustache/navCV.mustache');
             app.getMustache(app.mustacheSettings.cvToBody);
             app.getCVSections();
             break;
-         default: app.getNav('navMain.mustache');
+         default: app.getNav('/mustache/navMain.mustache');
             break;
       };
 
+      window.onresize = app.closeMobileMenu;
+   },
+
+   setPageContent: function() {
       switch (document.title){
          case app.pageTitles.home: 
             app.getMustache(app.mustacheSettings.galleryToBody);
@@ -65,12 +70,10 @@ const app = {
          }
          default: break;
       };
-      
-      window.onresize = app.closeMobileMenu;
    },
 
    getMustache: function({mustache, targetElement, templateData}) {
-      fetch(mustache)
+      fetch('/mustache/' + mustache + '.mustache')
       .then(response => response.text())
       .then(template => {
          const rendered = Mustache.render(template, templateData);
@@ -109,23 +112,31 @@ const app = {
       // fetch a particular project
       app.client.getEntry(entry).then(project => {
         console.log(project);
+
         const projectData = {
           title: project.fields.title,
           imageURL: `http:${project.fields.featuredImage.fields.file.url}`,
           imageTitle: project.fields.featuredImage.fields.title,
-          description: documentToHtmlString(project.fields.description)
+          description: documentToHtmlString(project.fields.description),
+          date: project.fields.dateCreated
         };
 
         // load the template for this item from a local file
-        fetch('projectPage.mustache')
-          .then(response => response.text())
-          .then(template => {
-            // render the template with the data
-            const rendered = Mustache.render(template, projectData);
-            // add the element to the container
-            $('.content').append(rendered);
-          }
-        );
+        app.mustacheSettings.projectToBody.templateData = projectData;
+        app.getMustache(app.mustacheSettings.projectToBody);
+
+        project.fields.descriptionImages.forEach(img => {
+         const imageData = {
+            imageURL: `http:${img.fields.file.url}`,
+            imageTitle: img.fields.title
+           };
+         
+         app.mustacheSettings.projectImgToContainer.targetElement = '.image-container-'+ img.fields.description;
+         app.mustacheSettings.projectImgToContainer.templateData = imageData;
+
+         app.getMustache(app.mustacheSettings.projectImgToContainer);
+        });
+       
       });
     },
 
