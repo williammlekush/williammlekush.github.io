@@ -162,6 +162,30 @@ padding: 1em 2em;
    text-align: center;
 }
 
+.project--image-grid {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   margin: 0.5em 1em;
+}
+
+.project--image-grid .project--image-container {
+   margin: 0;
+   padding: 8px;
+}
+
+.project--grid--futility-0 .project--image-container,
+.project--grid--futility-1 .project--image-container,
+.project--grid--futility-2 .project--image-container{
+   width:33%;
+}
+
+.project--grid--futility-2 .project--image-container {
+
+}
+
+
 .project--image-container {
    padding: 16px;
    margin: 0.5em 1em;
