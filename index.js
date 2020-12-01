@@ -113,11 +113,20 @@ const app = {
       app.client.getEntry(entry).then(project => {
         console.log(project);
 
+        const options = {
+         renderNode: {
+               'embedded-asset-block': ({data: {target: {fields}}}) => {
+                  debugger;
+                  return `<img src="${fields.file.url}" height="${fields.file.details.image.height}" width="${fields.file.details.image.width}" alt="${fields.description}"/>`;
+            }
+         }
+      };
+
         const projectData = {
           title: project.fields.title,
           imageURL: `http:${project.fields.featuredImage.fields.file.url}`,
           imageTitle: project.fields.featuredImage.fields.title,
-          description: documentToHtmlString(project.fields.description),
+          description: documentToHtmlString(project.fields.description, options),
           date: project.fields.dateCreated
         };
 
