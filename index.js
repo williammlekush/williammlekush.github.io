@@ -193,21 +193,6 @@ const app = {
       })
    },
 
-   setMasonryGrid: function({gridContainer = '.masonry-grid', gridSizer = '.grid-sizer', gridItem = '.grid-item'}) {
-            
-      const grid = $(gridContainer);
-
-      const msnry = new Masonry( grid, {
-          columnWidth: gridSizer,
-      itemSelector: gridItem,
-      percentPosition: true             
-      });
-
-      imagesLoaded( grid ).on( 'progress', function() {
-      msnry.layout();
-      });
-   },
-
    closeMobileMenu: function() {
       let navMenu = $('mobileNavMenu');
       let w = window.innerWidth;
