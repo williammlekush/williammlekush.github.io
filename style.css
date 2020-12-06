@@ -105,6 +105,7 @@ padding: 1em 2em;
    display: flex;
    flex-flow: row wrap;
    justify-content: center;
+   align-items: flex-start;
 }
 
 .project--title,
@@ -221,6 +222,7 @@ padding: 1em 2em;
    box-shadow: inset 8px 8px 12px #272727, inset -8px -8px 12px #2B2B2B;   border-radius: 8px;
 
 }
+
 /* Content: Gallery */
 .gallery{
 display:flex;
@@ -666,6 +668,9 @@ width: 100%;
    
    .project--card {
       padding: 1em;
+      background: none;
+      border: none;
+      box-shadow: none;
    }
 
    .content--project h1,
@@ -681,8 +686,17 @@ width: 100%;
       margin: 0 1em;
    }
 
+   .project--card img {
+      align-self: center;
+      height: auto;
+   }
+
    .project--image-container,
    .project--image-grid img {
       margin: 0;
+   }
+
+   .content--project p a {
+      word-wrap: break-word;
    }
 }
