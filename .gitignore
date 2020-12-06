@@ -1,9 +1,6 @@
 -# Mac Files
 .DS_Store
 
-#Config
-config.js
-
 #Dependencies --> use 'npm rebuild' to add the modules to your local environment
 nod_modules/
 
