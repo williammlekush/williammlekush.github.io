@@ -36,8 +36,8 @@ const app = {
    initialize: function() {
 
       app.client = contentful.createClient({
-         space:'s0xe8q8ao1vz',
-         accessToken:'LhgIVHvxMQFIv5pudAPQsHw2BrhpeKLGTM-rDlh663Y',
+         space: config.SPACE,
+         accessToken: config.API_TOKEN
       });   
    },
 
