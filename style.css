@@ -105,6 +105,7 @@ padding: 1em 2em;
    display: flex;
    flex-flow: row wrap;
    justify-content: center;
+   align-items: flex-start;
 }
 
 .project--title,
@@ -683,6 +684,11 @@ width: 100%;
 
    .project--date-created {
       margin: 0 1em;
+   }
+
+   .project--card img {
+      align-self: center;
+      height: auto;
    }
 
    .project--image-container,
