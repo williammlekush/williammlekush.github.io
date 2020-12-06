@@ -30,9 +30,6 @@ const app = {
          'mustache': 'project',
          'targetElement': 'body'
       },
-      projectImgToContainer: {
-         'mustache': 'projectImage'
-      }
    },
 
 
@@ -134,18 +131,6 @@ const app = {
         app.mustacheSettings.projectToBody.templateData = projectData;
         app.getMustache(app.mustacheSettings.projectToBody);
 
-        project.fields.descriptionImages.forEach(img => {
-         const imageData = {
-            imageURL: `http:${img.fields.file.url}`,
-            imageTitle: img.fields.title
-           };
-         
-         app.mustacheSettings.projectImgToContainer.targetElement = '.image-container-'+ img.fields.description;
-         app.mustacheSettings.projectImgToContainer.templateData = imageData;
-
-         app.getMustache(app.mustacheSettings.projectImgToContainer);
-        });
-       
       });
     },
 
@@ -206,7 +191,6 @@ const app = {
       let navMenu = $('mobileNavMenu');
       let w = window.innerWidth;
       if(w > 1000) navMenu.style.display = "none";
-      
   }
 
 }
