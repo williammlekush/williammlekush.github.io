@@ -4,102 +4,33 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>William Mlekush - About</title>
+      <title>About - William Mlekush</title>
       <meta name="description" content="About William Mlekush">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    </head>
-   <body>
+   <body>    
+     <!-- JQuery -->
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <!-- Contentful -->
+     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+     <script>
+         var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below
+     </script>
+     <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js"></script>
+     <!-- Mustache -->
+     <script src="https://unpkg.com/mustache@latest"></script>
+     <!-- JS -->
+     <script src="index.js"></script>
+     <script>
+         (function() {
+             app.initialize();
+             app.setNav();
+             app.setPageContent();
+         })();
+     </script>
 
-      <nav class="navSidebar">
-         <header><a href="index.html" class="homeLink">William Mlekush</a></header>
-
-         <ul class="connectMenu">
-             <li class="connectButton" id="linkedIn"><a href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a></li>
-             <li class="connectButton" id="gitHub"><a href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
-             <li class="connectButton" id="email">w.mlekush@gmail.com</li>
-         </ul>         
-         
-         <ul class="navMenu">              
-             <!-- <li class="navButton"><a href="work.html">Work</a></li>
-             <li class="navButton"><a href="blog.html">Blog</a></li> -->
-             <li class="navButton"><a href="about.html" class="activeLink">About</a></li>
-             <li class="navButton"><a href="cv.html">CV</a></li>
-         </ul>
-     </nav>
-
-     <nav class="navTopBar">
-         <header>
-             <a href="index.html" class="homeLink">William Mlekush</a>
-             <div class="connectMenu">
-                 <a class="connectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
-                 <a class="connectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
-                 <div id="email">w.mlekush@gmail.com</div></div>
-             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                 <i class="fa fa-bars"></i>
-             </a>
-             
-         </header>
-
-             <!-- <a class="navButton" href="work.html">Work</a>
-             <a class="navButton" href="blog.html">Blog</a> -->
-             <a class="navButton activeLink" href="about.html">About</a>
-             <a class="navButton" href="cv.html">CV</a>   
-
-            
-
-             <div id=mobileNavMenu>
-                 <div class="mobileConnectMenu">
-                     <a class="mobileConnectButton" href="https://www.linkedin.com/in/william-mlekush/" target="_blank">LinkedIn</a>
-                     <a class="mobileConnectButton" href="https://github.com/williammlekush" target="_blank">GitHub</a></li>
-                     <div id="email">w.mlekush@gmail.com</div></div>    
-                 <!-- <a class="mobileButton" href="work.html">Work</a>
-                 <a class="mobileButton" href="blog.html">Blog</a> -->
-                 <a class="mobileButton activeLink" href="about.html">About</a>
-                 <a class="mobileButton" href="cv.html">CV</a>   
-             </div>
-
-             
-     </nav>
-
-
-     <section class="content content--project">
-        <img class="project-image" id="headshot" src="00_assets/headshot.jpg" alt="Me, sitting in a chair.">
-        <p>I am a cautious optimist and disciplined pragmatist focused on creating delightful, empowering experiences. 
-           I believe in design thinking as a method for interrogating and expressing human values. 
-           My passions lie in interaction design, XR development, and craftsmanship.</p>
-        <p>As a student at NYUAD, I study Interactive Media to understand interactions with current and emerging technologies,
-            such as physical computing, augmented reality, virtual reality, and artificial intelligence
-            . These studies are complemented with concentrations in Psychology and Design,
-             as a broad understanding of human behavior and the design process is key to creating meaningful experiences.
-              Conceptually, I pursue methods of using and expanding the movement capacity of the human body.</p>
-
-        <p>
-         During the semester, I work as a Wood Shop assistant, improving my ability to fabricate by practicing traditional joinery and carpentry.
-          When not making or thinking about making, I spend time cross-training movement disciplines
-           (currently climbing, hand-balancing, floreio, and powerlifting) and backpacking wilderness areas.</p>
-     </section>
-    
-      
-      <script>
-         function myFunction() {
-             var x = document.getElementById("mobileNavMenu");
-             if (x.style.display === "flex") {
-                 x.style.display = "none";
-             } else {
-                 x.style.display = "flex";
-             }
-        }
-
-        function closeMobileMenu(){
-                var x = document.getElementById("mobileNavMenu")
-                var w = window.innerWidth;
-                if(w > 800) {
-                    x.style.display = "none";
-                } 
-            } 
-            window.onresize = closeMobileMenu;
-     </script>   </body>
+     </body>
 </html>
