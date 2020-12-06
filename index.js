@@ -113,7 +113,6 @@ const app = {
         const options = {
          renderNode: {
                'embedded-asset-block': ({data: {target: {fields}}}) => {
-                  debugger;
                   return `<img src="${fields.file.url}" height="${fields.file.details.image.height}" width="${fields.file.details.image.width}" alt="${fields.description}"/>`;
             }
          }
