@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProjectComponent } from './project.component';
 
-const routes: Routes = [{ path: '', component: ProjectComponent }];
+const routes: Routes = [{ path: '', component: ProjectComponent, outlet: 'content' }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
